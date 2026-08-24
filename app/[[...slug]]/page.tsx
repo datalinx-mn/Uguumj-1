@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-sync-scripts */
+
 export default function LegacyUguumjArkhadSite() {
   return (
     <>
