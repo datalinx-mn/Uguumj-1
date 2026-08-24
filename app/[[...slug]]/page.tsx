@@ -1,6 +1,14 @@
 /* eslint-disable @next/next/no-sync-scripts */
+import AdminClient from "../admin/AdminClient";
 
-export default function LegacyUguumjArkhadSite() {
+export default async function LegacyUguumjArkhadSite({
+  params,
+}: {
+  params: Promise<{ slug?: string[] }>;
+}) {
+  const route = await params;
+  if (route.slug?.[0] === "admin") return <AdminClient />;
+
   return (
     <>
       <div id="root" />
