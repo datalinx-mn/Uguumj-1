@@ -22,6 +22,30 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href="/legacy/assets/index-CC0e9Jox.css" />
+        <style>{`
+          @font-face {
+            font-family: "Uguumj Noto Serif";
+            src: url("/fonts/NotoSerif-Uguumj.ttf") format("truetype");
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+          }
+          @font-face {
+            font-family: "Uguumj Manrope";
+            src: url("/fonts/Manrope-Uguumj.ttf") format("truetype");
+            font-style: normal;
+            font-weight: 200 800;
+            font-display: swap;
+          }
+          html[lang="mn"] {
+            --app-font-serif: "Uguumj Noto Serif", serif;
+            --app-font-sans: "Uguumj Manrope", sans-serif;
+          }
+          html[lang="en"] {
+            --app-font-serif: "Playfair Display", serif;
+            --app-font-sans: "Noto Sans", sans-serif;
+          }
+        `}</style>
       </head>
       <body>{children}</body>
     </html>
