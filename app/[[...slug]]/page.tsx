@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import AdminClient from "../admin/AdminClient";
+import RebaClient from "../reba/RebaClient";
 
 export default async function LegacyUguumjArkhadSite({
   params,
@@ -8,6 +9,7 @@ export default async function LegacyUguumjArkhadSite({
 }) {
   const route = await params;
   if (route.slug?.[0] === "admin") return <AdminClient />;
+  if (route.slug?.join("/") === "reba-vintage-cafe") return <RebaClient />;
 
   return (
     <>
